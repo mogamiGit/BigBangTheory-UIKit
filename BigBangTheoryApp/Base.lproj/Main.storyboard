@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EQ3-pu-4Wh">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main Table View Controller-->
+        <scene sceneID="JGY-nW-ede">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="EQ3-pu-4Wh" customClass="MainTableViewController" customModule="BigBangTheoryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dph-Jd-8K4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="zelda" rowHeight="90" id="dfc-6g-gew" customClass="EpisodesViewCell" customModule="BigBangTheoryApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dfc-6g-gew" id="j7c-Sf-GDA">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0s5-F9-Gk1">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="3g4-7K-Qyj"/>
+                                                <constraint firstAttribute="height" constant="90" id="yTQ-cu-yBo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1XM-7B-u5g">
+                                            <rect key="frame" x="176" y="11" width="197" height="68"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Number Episode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOE-bl-fJ1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="38.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Episode" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kim-ds-QvC">
+                                                    <rect key="frame" x="0.0" y="46.333333333333336" width="197" height="21.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1XM-7B-u5g" firstAttribute="leading" secondItem="0s5-F9-Gk1" secondAttribute="trailing" constant="16" id="0aB-1L-axa"/>
+                                        <constraint firstItem="1XM-7B-u5g" firstAttribute="top" secondItem="j7c-Sf-GDA" secondAttribute="topMargin" id="9ot-7H-9sN"/>
+                                        <constraint firstItem="0s5-F9-Gk1" firstAttribute="top" secondItem="j7c-Sf-GDA" secondAttribute="top" id="D4Z-DZ-z56"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1XM-7B-u5g" secondAttribute="bottom" id="JpX-eI-5Nt"/>
+                                        <constraint firstAttribute="bottom" secondItem="0s5-F9-Gk1" secondAttribute="bottom" id="QCH-gT-ZPJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1XM-7B-u5g" secondAttribute="trailing" id="XhN-aE-1vh"/>
+                                        <constraint firstItem="0s5-F9-Gk1" firstAttribute="leading" secondItem="j7c-Sf-GDA" secondAttribute="leading" id="di8-TH-Mhz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="episodeImage" destination="0s5-F9-Gk1" id="AZZ-ad-zIV"/>
+                                    <outlet property="nameEpisodeLabel" destination="kim-ds-QvC" id="MvJ-bJ-Oqt"/>
+                                    <outlet property="numberEpisodeLabel" destination="nOE-bl-fJ1" id="a3g-cN-fLy"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EQ3-pu-4Wh" id="R6o-yP-2Qd"/>
+                            <outlet property="delegate" destination="EQ3-pu-4Wh" id="g6a-mZ-ueU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVW-Ku-wti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-158.01526717557252" y="-208.45070422535213"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
