@@ -14,9 +14,12 @@ final class ModelLogic {
     
     var snapshot:NSDiffableDataSourceSnapshot<String, BigBangEpisode> {
         var snapshot = NSDiffableDataSourceSnapshot<String, BigBangEpisode>()
-        snapshot.appendSections(seasons)
+        snapshot.appendSections(seasons.map {"Season \($0)"})
         for season in seasons {
-            snapshot.appendItems(episodes, toSection: season)
+            let episode = episodes.filter { episode in
+                episode.season == Int(season)
+            }
+            snapshot.appendItems(episode, toSection: "Season \(season)")
         }
         return snapshot
     }
@@ -29,8 +32,8 @@ final class ModelLogic {
     //ORIGINAL
     //snapshot.appendItems(episodes, toSection: season)
     
-    var seasons:[String] {
-        Array(Set(episodes.map(\.season))).sorted().map { String("Season \($0)") }
+    var seasons:[Int] {
+        Array(Set(episodes.map(\.season))).sorted { $0 < $1 }
     }
     
     init() {
