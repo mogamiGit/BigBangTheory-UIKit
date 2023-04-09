@@ -10,6 +10,7 @@ import UIKit
 final class ModelLogic {
     static let shared = ModelLogic()
     let modelPersistence = ModelPersistence.shared
+    
     var episodes:[BigBangEpisode]
     
     var snapshot:NSDiffableDataSourceSnapshot<String, BigBangEpisode> {
@@ -24,23 +25,25 @@ final class ModelLogic {
         return snapshot
     }
     
-    //filtrar episodes
-    //episodes.filter { $0.contains("") }
-    //episodes.filter { episodes.season == season }
-    //let episodes = episodes.contains("\(episodes.season)")
-    
-    //ORIGINAL
-    //snapshot.appendItems(episodes, toSection: season)
-    
     var seasons:[Int] {
         Array(Set(episodes.map(\.season))).sorted { $0 < $1 }
     }
     
+    //inicialización episodes
     init() {
         do {
             self.episodes = try modelPersistence.getEpisodes()
         } catch {
             self.episodes = []
         }
+    }
+    
+    func getRows() -> Int {
+        episodes.count
+    }
+    
+    func getEpisodeRow(indexPath:IndexPath) -> BigBangEpisode {
+        //Elemento concreto de un score a través de un indexPath
+        episodes[indexPath.row]
     }
 }

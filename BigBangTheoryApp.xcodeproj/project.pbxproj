@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3A7323129D5A84800121F48 /* SectionCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A7323029D5A84800121F48 /* SectionCell.storyboard */; };
+		D36EB66629E1EFAF00F9CEA7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36EB66529E1EFAF00F9CEA7 /* DetailViewController.swift */; };
 		D3D5D53829D2B66F00AB8B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D53729D2B66F00AB8B63 /* AppDelegate.swift */; };
 		D3D5D53A29D2B66F00AB8B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D53929D2B66F00AB8B63 /* SceneDelegate.swift */; };
 		D3D5D53F29D2B66F00AB8B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D5D53D29D2B66F00AB8B63 /* Main.storyboard */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D3A7323029D5A84800121F48 /* SectionCell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SectionCell.storyboard; sourceTree = "<group>"; };
+		D36EB66529E1EFAF00F9CEA7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D3D5D53429D2B66F00AB8B63 /* BigBangTheoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBangTheoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D5D53729D2B66F00AB8B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D5D53929D2B66F00AB8B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 			children = (
 				D3D5D54C29D2B6F400AB8B63 /* View */,
 				D3D5D54E29D2B70800AB8B63 /* Controller */,
-				D3D5D54D29D2B6FE00AB8B63 /* Model */,
 				D3D5D56329D3051900AB8B63 /* Logic */,
+				D3D5D54D29D2B6FE00AB8B63 /* Model */,
 				D3D5D55A29D2C3B900AB8B63 /* Resources */,
 				D3D5D54B29D2B68600AB8B63 /* System */,
 			);
@@ -98,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				D3D5D53D29D2B66F00AB8B63 /* Main.storyboard */,
-				D3A7323029D5A84800121F48 /* SectionCell.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -107,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				D3D5D54F29D2B78C00AB8B63 /* EpisodesModel.swift */,
-				D3D5D55F29D2C6AD00AB8B63 /* ModelLogic.swift */,
 				D3D5D56129D2C6B800AB8B63 /* ModelPersistence.swift */,
 			);
 			name = Model;
@@ -119,6 +117,7 @@
 				D3D5D55329D2BA2900AB8B63 /* MainTableViewController.swift */,
 				D3D5D55D29D2C53200AB8B63 /* EpisodesViewCell.swift */,
 				D3D5D56629D310E900AB8B63 /* EpisodesDiffableDataSource.swift */,
+				D36EB66529E1EFAF00F9CEA7 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -134,6 +133,7 @@
 		D3D5D56329D3051900AB8B63 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				D3D5D55F29D2C6AD00AB8B63 /* ModelLogic.swift */,
 				D3D5D56429D3052900AB8B63 /* ViewLogic.swift */,
 			);
 			name = Logic;
@@ -201,7 +201,6 @@
 				D3D5D54129D2B67000AB8B63 /* Assets.xcassets in Resources */,
 				D3D5D55C29D2C3D200AB8B63 /* bigbang.json in Resources */,
 				D3D5D53F29D2B66F00AB8B63 /* Main.storyboard in Resources */,
-				D3A7323129D5A84800121F48 /* SectionCell.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +218,7 @@
 				D3D5D56529D3052900AB8B63 /* ViewLogic.swift in Sources */,
 				D3D5D56229D2C6B800AB8B63 /* ModelPersistence.swift in Sources */,
 				D3D5D53829D2B66F00AB8B63 /* AppDelegate.swift in Sources */,
+				D36EB66629E1EFAF00F9CEA7 /* DetailViewController.swift in Sources */,
 				D3D5D56029D2C6AD00AB8B63 /* ModelLogic.swift in Sources */,
 				D3D5D53A29D2B66F00AB8B63 /* SceneDelegate.swift in Sources */,
 			);
