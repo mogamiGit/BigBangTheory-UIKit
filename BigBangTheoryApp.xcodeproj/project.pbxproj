@@ -21,6 +21,7 @@
 		D3D5D56229D2C6B800AB8B63 /* ModelPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D56129D2C6B800AB8B63 /* ModelPersistence.swift */; };
 		D3D5D56529D3052900AB8B63 /* ViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D56429D3052900AB8B63 /* ViewLogic.swift */; };
 		D3D5D56729D310E900AB8B63 /* EpisodesDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D56629D310E900AB8B63 /* EpisodesDiffableDataSource.swift */; };
+		D3FC732929E31B1500E74578 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC732829E31B1500E74578 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D3D5D56129D2C6B800AB8B63 /* ModelPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPersistence.swift; sourceTree = "<group>"; };
 		D3D5D56429D3052900AB8B63 /* ViewLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogic.swift; sourceTree = "<group>"; };
 		D3D5D56629D310E900AB8B63 /* EpisodesDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesDiffableDataSource.swift; sourceTree = "<group>"; };
+		D3FC732829E31B1500E74578 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		D3D5D53629D2B66F00AB8B63 /* BigBangTheoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				D3FC732729E31B0A00E74578 /* Helpers */,
 				D3D5D54C29D2B6F400AB8B63 /* View */,
 				D3D5D54E29D2B70800AB8B63 /* Controller */,
 				D3D5D56329D3051900AB8B63 /* Logic */,
@@ -137,6 +140,14 @@
 				D3D5D56429D3052900AB8B63 /* ViewLogic.swift */,
 			);
 			name = Logic;
+			sourceTree = "<group>";
+		};
+		D3FC732729E31B0A00E74578 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC732829E31B1500E74578 /* Extensions.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				D3D5D53829D2B66F00AB8B63 /* AppDelegate.swift in Sources */,
 				D36EB66629E1EFAF00F9CEA7 /* DetailViewController.swift in Sources */,
 				D3D5D56029D2C6AD00AB8B63 /* ModelLogic.swift in Sources */,
+				D3FC732929E31B1500E74578 /* Extensions.swift in Sources */,
 				D3D5D53A29D2B66F00AB8B63 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

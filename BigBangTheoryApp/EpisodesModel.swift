@@ -17,3 +17,9 @@ struct BigBangEpisode:Codable, Hashable {
     let image: String
     let summary: String
 }
+
+extension BigBangEpisode {
+    var formattedAirDate:String {
+        airdate.convertToMonthYearString() ?? "Unknown"
+    }
+}

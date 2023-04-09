@@ -48,7 +48,7 @@ class MainTableViewController: UITableViewController {
             let cell = sender as? UITableViewCell,
             let cellIndexPath = tableView.indexPath(for: cell) else { return }
         
-        let episode = modelLogic.getEpisodeRow(indexPath: cellIndexPath)
+        let episode = modelLogic.getEpisodesBySeason(season: cellIndexPath.section, row: cellIndexPath.row)
         detail.selectedEpisode = episode
     }
 

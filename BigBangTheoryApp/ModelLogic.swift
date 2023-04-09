@@ -45,4 +45,11 @@ final class ModelLogic {
     func getEpisodeRow(indexPath:IndexPath) -> BigBangEpisode {
         episodes[indexPath.row]
     }
+    
+    func getEpisodesBySeason(season:Int, row:Int) -> BigBangEpisode {
+        let episodes = episodes.filter { episode in
+            episode.season == seasons[season]
+        }
+        return episodes[row]
+    }
 }

@@ -9,9 +9,19 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var summaryDetail: UILabel!
-    @IBOutlet weak var seasonLabelDetail: UILabel!
+    @IBOutlet weak var episodeNumberDetail: UILabel!
+    @IBOutlet weak var seasonLabel: UILabel!
     @IBOutlet weak var titleEpisodeDetail: UILabel!
     @IBOutlet weak var imageEpisodeDetail: UIImageView!
+    @IBOutlet weak var runtimeLabel: UILabel!
+    @IBOutlet weak var airdateLabel: UILabel!
+    
+    @IBAction func watchEpisode(_ sender: UIButton) {
+        let urlString = (selectedEpisode?.url.absoluteString)!
+        
+        guard let url = URL(string: urlString) else { return }
+        UIApplication.shared.open(url)
+    }
     
     let viewLogic = ViewLogic.shared
     
@@ -23,21 +33,13 @@ class DetailViewController: UIViewController {
 
         if let selectedEpisode {
             titleEpisodeDetail.text = selectedEpisode.name
-            seasonLabelDetail.text = "Season \(selectedEpisode.season)"
+            seasonLabel.text = "Season \(selectedEpisode.season)"
             summaryDetail.text = selectedEpisode.summary
+            episodeNumberDetail.text = "Episode \(selectedEpisode.number)"
+            runtimeLabel.text = "\(selectedEpisode.runtime) min"
+            airdateLabel.text = selectedEpisode.formattedAirDate
             imageEpisodeDetail.image = viewLogic.getCover(episode: selectedEpisode)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
