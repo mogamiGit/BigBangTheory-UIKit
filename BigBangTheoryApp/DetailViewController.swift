@@ -13,15 +13,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleEpisodeDetail: UILabel!
     @IBOutlet weak var imageEpisodeDetail: UIImageView!
     
+    let viewLogic = ViewLogic.shared
+    
     var selectedEpisode:BigBangEpisode?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleEpisodeDetail.text = selectedEpisode?.name
-        seasonLabelDetail.text = "Season \(selectedEpisode?.season ?? 0)"
-        summaryDetail.text = selectedEpisode?.summary
+        if let selectedEpisode {
+            titleEpisodeDetail.text = selectedEpisode.name
+            seasonLabelDetail.text = "Season \(selectedEpisode.season)"
+            summaryDetail.text = selectedEpisode.summary
+            imageEpisodeDetail.image = viewLogic.getCover(episode: selectedEpisode)
+        }
     }
     
 

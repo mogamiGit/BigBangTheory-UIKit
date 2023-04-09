@@ -43,7 +43,6 @@ final class ModelLogic {
     }
     
     func getEpisodeRow(indexPath:IndexPath) -> BigBangEpisode {
-        //Elemento concreto de un score a través de un indexPath
         episodes[indexPath.row]
     }
 }
