@@ -16,7 +16,7 @@ class EpisodesDiffableDataSource: UITableViewDiffableDataSource<String, BigBangE
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        false
+        true
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

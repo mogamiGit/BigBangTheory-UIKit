@@ -30,6 +30,19 @@ class MainTableViewController: UITableViewController {
         tableView.dataSource = dataSource
         dataSource.apply(modelLogic.snapshot)
     }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let episode = dataSource.itemIdentifier(for: indexPath) else { return nil }
+        
+        let action = UIContextualAction(style: modelLogic.isFavorite(id: episode.id) ? .destructive : .normal, title: "Favorited") { [self] _, _, handler in
+            modelLogic.toogleFavorites(id: episode.id)
+                handler(true)
+            }
+            action.image = UIImage(systemName: modelLogic.isFavorite(id: episode.id) ? "heart" : "bolt.heart.fill")
+        action.backgroundColor = modelLogic.isFavorite(id: episode.id) ? .black : UIColor(red: 0.82, green: 0.07, blue: 0.07, alpha: 1.00)
+        
+            return UISwipeActionsConfiguration(actions: [action])
+    }
 
     // MARK: - Table view data source
     

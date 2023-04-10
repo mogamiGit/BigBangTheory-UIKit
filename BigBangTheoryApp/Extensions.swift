@@ -5,7 +5,7 @@
 //  Created by Monica Galan de la Llana on 9/4/23.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     func convertToDate() -> Date? {

@@ -18,6 +18,10 @@ struct BigBangEpisode:Codable, Hashable {
     let summary: String
 }
 
+struct Favorites:Codable {
+    let ids:[Int]
+}
+
 extension BigBangEpisode {
     var formattedAirDate:String {
         airdate.convertToMonthYearString() ?? "Unknown"

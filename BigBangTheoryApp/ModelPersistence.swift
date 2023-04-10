@@ -12,6 +12,8 @@ final class ModelPersistence {
     
     private let url = Bundle.main.url(forResource: "bigbang", withExtension: "json")!
     
+    let favEpisodes = URL.documentsDirectory.appending(path: "scoresdata.json")
+    
     func getEpisodes() throws -> [BigBangEpisode] {
         let data = try Data(contentsOf: url)
         let decodeData = try JSONDecoder().decode([BigBangEpisode].self, from: data)
@@ -26,5 +28,20 @@ final class ModelPersistence {
         } else {
             return nil
         }
+    }
+    
+    func getFavorites() throws -> [Int] {
+        if FileManager.default.fileExists(atPath: favEpisodes.path()) {
+            let data = try Data(contentsOf: favEpisodes)
+            return try JSONDecoder().decode(Favorites.self, from: data).ids
+        } else {
+            return []
+        }
+    }
+    
+    func saveFavorites(ids:[Int]) throws {
+        let favorites = Favorites(ids: ids)
+        let data = try JSONEncoder().encode(favorites)
+        try data.write(to: favEpisodes, options: .atomic)
     }
 }

@@ -25,6 +25,12 @@ final class ModelLogic {
         return snapshot
     }
     
+    private var favorites:[Int] {
+        didSet {
+            try? modelPersistence.saveFavorites(ids: favorites)
+        }
+    }
+    
     var seasons:[Int] {
         Array(Set(episodes.map(\.season))).sorted { $0 < $1 }
     }
@@ -33,8 +39,10 @@ final class ModelLogic {
     init() {
         do {
             self.episodes = try modelPersistence.getEpisodes()
+            self.favorites = try modelPersistence.getFavorites()
         } catch {
             self.episodes = []
+            self.favorites = []
         }
     }
     
@@ -51,5 +59,17 @@ final class ModelLogic {
             episode.season == seasons[season]
         }
         return episodes[row]
+    }
+    
+    func isFavorite(id:Int) -> Bool {
+        favorites.contains(id)
+    }
+    
+    func toogleFavorites(id:Int) {
+        if favorites.contains(id) {
+            favorites.removeAll(where: { $0 == id })
+        } else {
+            favorites.append(id)
+        }
     }
 }
