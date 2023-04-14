@@ -20,6 +20,6 @@ class EpisodesDiffableDataSource: UITableViewDiffableDataSource<String, BigBangE
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        //
+        //para editar elementos del tableview .delete
     }
 }

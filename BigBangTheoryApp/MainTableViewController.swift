@@ -39,7 +39,7 @@ class MainTableViewController: UITableViewController {
                 handler(true)
             }
             action.image = UIImage(systemName: modelLogic.isFavorite(id: episode.id) ? "heart" : "bolt.heart.fill")
-        action.backgroundColor = modelLogic.isFavorite(id: episode.id) ? .black : UIColor(red: 0.82, green: 0.07, blue: 0.07, alpha: 1.00)
+        action.backgroundColor = modelLogic.isFavorite(id: episode.id) ? .black : UIColor(red: 1.00, green: 0.43, blue: 0.38, alpha: 1.00)
         
             return UISwipeActionsConfiguration(actions: [action])
     }

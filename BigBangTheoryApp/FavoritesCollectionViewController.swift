@@ -43,6 +43,9 @@ class FavoritesCollectionViewController: UICollectionViewController {
             return UICollectionViewCell()
         }
         cell.coverFavorites.image = viewLogic.getCover(episode: episode)
+        cell.chapterLabelFavorites.text = "Episode \(episode.number)"
+        cell.seasonLabelFavorites.text = "Season \(episode.season)"
+        
     
         return cell
     }
