@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VyM-zG-sBV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My favs-->
+        <scene sceneID="PhO-uY-06L">
+            <objects>
+                <collectionViewController id="hAr-RR-ha9" customClass="FavoritesCollectionViewController" customModule="BigBangTheoryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6XV-an-qwm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tEz-rP-xo8">
+                            <size key="itemSize" width="160" height="160"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="zelda" id="UXN-iC-VUm" customClass="FavoritesViewCell" customModule="BigBangTheoryApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4MG-fh-eKi">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-Od-MGz">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="Wz2-Ud-byE"/>
+                                                <constraint firstAttribute="height" constant="160" id="nzP-rG-dXz"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Seu-Od-MGz" secondAttribute="bottom" id="8lj-K3-vgG"/>
+                                        <constraint firstItem="Seu-Od-MGz" firstAttribute="leading" secondItem="4MG-fh-eKi" secondAttribute="leading" id="RRQ-MH-kNu"/>
+                                        <constraint firstItem="Seu-Od-MGz" firstAttribute="top" secondItem="4MG-fh-eKi" secondAttribute="top" id="eUM-Oi-LKf"/>
+                                        <constraint firstAttribute="trailing" secondItem="Seu-Od-MGz" secondAttribute="trailing" id="qto-pS-yhb"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="coverFavorites" destination="Seu-Od-MGz" id="T6P-4S-MdO"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hAr-RR-ha9" id="X7P-5N-EEm"/>
+                            <outlet property="delegate" destination="hAr-RR-ha9" id="5f3-DR-acW"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="My favs" id="E8T-VA-yME"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2K-qG-Zc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="461"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="TV1-Ja-X4R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VyM-zG-sBV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" id="fWW-YU-ufL">
+                        <imageReference key="image" image="bolt.heart.fill" catalog="system" symbolScale="medium" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="0.82352941180000006" green="0.074509803920000006" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cc2-gz-wsU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hAr-RR-ha9" kind="relationship" relationship="rootViewController" id="EDu-09-8IQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTH-cy-DFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolt.heart.fill" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

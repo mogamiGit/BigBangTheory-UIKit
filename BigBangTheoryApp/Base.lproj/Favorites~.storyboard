@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -250,6 +251,56 @@
             </objects>
             <point key="canvasLocation" x="768.70229007633588" y="-208.45070422535213"/>
         </scene>
+        <!--My favs-->
+        <scene sceneID="PhO-uY-06L">
+            <objects>
+                <collectionViewController id="hAr-RR-ha9" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6XV-an-qwm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tEz-rP-xo8">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="zelda" id="UXN-iC-VUm">
+                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4MG-fh-eKi">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-Od-MGz">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="128" id="049-zB-uxI"/>
+                                                <constraint firstAttribute="width" constant="128" id="Vo8-NO-8mn"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Seu-Od-MGz" secondAttribute="bottom" id="8lj-K3-vgG"/>
+                                        <constraint firstItem="Seu-Od-MGz" firstAttribute="leading" secondItem="4MG-fh-eKi" secondAttribute="leading" id="RRQ-MH-kNu"/>
+                                        <constraint firstItem="Seu-Od-MGz" firstAttribute="top" secondItem="4MG-fh-eKi" secondAttribute="top" id="eUM-Oi-LKf"/>
+                                        <constraint firstAttribute="trailing" secondItem="Seu-Od-MGz" secondAttribute="trailing" id="qto-pS-yhb"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hAr-RR-ha9" id="X7P-5N-EEm"/>
+                            <outlet property="delegate" destination="hAr-RR-ha9" id="5f3-DR-acW"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="My favs" id="E8T-VA-yME"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2K-qG-Zc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="461"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="P0o-br-dYU">
             <objects>
@@ -261,7 +312,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="w7g-C6-WRx" kind="relationship" relationship="viewControllers" id="Aqz-FR-06C"/>
-                        <segue destination="eu7-0g-g8z" kind="relationship" relationship="viewControllers" id="FZD-gp-f6e"/>
+                        <segue destination="VyM-zG-sBV" kind="relationship" relationship="viewControllers" id="FZD-gp-f6e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7u-zf-frn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -269,17 +320,35 @@
             <point key="canvasLocation" x="-158.01526717557252" y="-208.45070422535213"/>
         </scene>
         <!--Favorites-->
-        <scene sceneID="wZd-v7-9L4">
+        <scene sceneID="TV1-Ja-X4R">
             <objects>
-                <viewControllerPlaceholder storyboardName="Favorites" id="eu7-0g-g8z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="M7M-jL-dq2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r37-2h-3hN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VyM-zG-sBV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" id="fWW-YU-ufL">
+                        <imageReference key="image" image="bolt.heart.fill" catalog="system" symbolScale="medium" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="0.82352941180000006" green="0.074509803920000006" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cc2-gz-wsU">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hAr-RR-ha9" kind="relationship" relationship="rootViewController" id="EDu-09-8IQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTH-cy-DFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="769" y="461"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bolt.heart.fill" catalog="system" width="128" height="107"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>

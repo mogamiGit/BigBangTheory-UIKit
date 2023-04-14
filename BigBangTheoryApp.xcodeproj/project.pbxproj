@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D34AE4BD29E5B70D002E44C0 /* FavoritesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34AE4BC29E5B70D002E44C0 /* FavoritesViewCell.swift */; };
 		D36EB66629E1EFAF00F9CEA7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36EB66529E1EFAF00F9CEA7 /* DetailViewController.swift */; };
+		D3D23B3D29E5B42F00BAFE93 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D23B3B29E5B42F00BAFE93 /* Favorites.storyboard */; };
+		D3D23B3F29E5B4A500BAFE93 /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D23B3E29E5B4A500BAFE93 /* FavoritesCollectionViewController.swift */; };
 		D3D5D53829D2B66F00AB8B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D53729D2B66F00AB8B63 /* AppDelegate.swift */; };
 		D3D5D53A29D2B66F00AB8B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D5D53929D2B66F00AB8B63 /* SceneDelegate.swift */; };
 		D3D5D53F29D2B66F00AB8B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D5D53D29D2B66F00AB8B63 /* Main.storyboard */; };
@@ -26,7 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D34AE4BC29E5B70D002E44C0 /* FavoritesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewCell.swift; sourceTree = "<group>"; };
 		D36EB66529E1EFAF00F9CEA7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D3D23B3C29E5B42F00BAFE93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BigBangTheoryApp/Base.lproj/Favorites.storyboard; sourceTree = "<group>"; };
+		D3D23B3E29E5B4A500BAFE93 /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 		D3D5D53429D2B66F00AB8B63 /* BigBangTheoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBangTheoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D5D53729D2B66F00AB8B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D5D53929D2B66F00AB8B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 		D3D5D54C29D2B6F400AB8B63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D3D23B3B29E5B42F00BAFE93 /* Favorites.storyboard */,
 				D3D5D53D29D2B66F00AB8B63 /* Main.storyboard */,
 				D3FC732A29E3328300E74578 /* LaunchScreen.storyboard */,
 			);
@@ -124,6 +131,8 @@
 				D3D5D55D29D2C53200AB8B63 /* EpisodesViewCell.swift */,
 				D3D5D56629D310E900AB8B63 /* EpisodesDiffableDataSource.swift */,
 				D36EB66529E1EFAF00F9CEA7 /* DetailViewController.swift */,
+				D3D23B3E29E5B4A500BAFE93 /* FavoritesCollectionViewController.swift */,
+				D34AE4BC29E5B70D002E44C0 /* FavoritesViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 			files = (
 				D3D5D54429D2B67000AB8B63 /* LaunchScreen.storyboard in Resources */,
 				D3D5D54129D2B67000AB8B63 /* Assets.xcassets in Resources */,
+				D3D23B3D29E5B42F00BAFE93 /* Favorites.storyboard in Resources */,
 				D3D5D55C29D2C3D200AB8B63 /* bigbang.json in Resources */,
 				D3FC732B29E3328300E74578 /* LaunchScreen.storyboard in Resources */,
 				D3D5D53F29D2B66F00AB8B63 /* Main.storyboard in Resources */,
@@ -230,6 +240,7 @@
 				D3D5D56729D310E900AB8B63 /* EpisodesDiffableDataSource.swift in Sources */,
 				D3D5D55029D2B78C00AB8B63 /* EpisodesModel.swift in Sources */,
 				D3D5D55E29D2C53200AB8B63 /* EpisodesViewCell.swift in Sources */,
+				D3D23B3F29E5B4A500BAFE93 /* FavoritesCollectionViewController.swift in Sources */,
 				D3D5D56529D3052900AB8B63 /* ViewLogic.swift in Sources */,
 				D3D5D56229D2C6B800AB8B63 /* ModelPersistence.swift in Sources */,
 				D3D5D53829D2B66F00AB8B63 /* AppDelegate.swift in Sources */,
@@ -237,12 +248,21 @@
 				D3D5D56029D2C6AD00AB8B63 /* ModelLogic.swift in Sources */,
 				D3FC732929E31B1500E74578 /* Extensions.swift in Sources */,
 				D3D5D53A29D2B66F00AB8B63 /* SceneDelegate.swift in Sources */,
+				D34AE4BD29E5B70D002E44C0 /* FavoritesViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D3D23B3B29E5B42F00BAFE93 /* Favorites.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3D23B3C29E5B42F00BAFE93 /* Base */,
+			);
+			name = Favorites.storyboard;
+			sourceTree = "<group>";
+		};
 		D3D5D53D29D2B66F00AB8B63 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -22,3 +22,7 @@ extension String {
         return outputDateFormatter.string(from: date)
     }
 }
+
+extension Notification.Name {
+    static let favoritesChange = Notification.Name("FAVCHANGES")
+}

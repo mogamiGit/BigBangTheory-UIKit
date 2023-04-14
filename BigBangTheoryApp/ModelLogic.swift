@@ -28,6 +28,7 @@ final class ModelLogic {
     private var favorites:[Int] {
         didSet {
             try? modelPersistence.saveFavorites(ids: favorites)
+            NotificationCenter.default.post(name: .favoritesChange, object: nil)
         }
     }
     
@@ -70,6 +71,17 @@ final class ModelLogic {
             favorites.removeAll(where: { $0 == id })
         } else {
             favorites.append(id)
+        }
+    }
+    
+    func getFavoritesRows() -> Int {
+        favorites.count
+    }
+    
+    func getEpisodeFromID(indexPath:IndexPath) -> BigBangEpisode? {
+        let id = favorites[indexPath.row]
+        return episodes.first { episode in
+            episode.id == id
         }
     }
 }
