@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My favs-->
+        <!--My favorites-->
         <scene sceneID="PhO-uY-06L">
             <objects>
                 <collectionViewController id="hAr-RR-ha9" customClass="FavoritesCollectionViewController" customModule="BigBangTheoryApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUr-Ac-QcU">
                                             <rect key="frame" x="34" y="126.66666666666669" width="138" height="15"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="hAr-RR-ha9" id="5f3-DR-acW"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="My favs" id="E8T-VA-yME"/>
+                    <navigationItem key="navigationItem" title="My favorites" id="E8T-VA-yME"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2K-qG-Zc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +102,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VyM-zG-sBV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" id="fWW-YU-ufL">
-                        <imageReference key="image" image="bolt.heart.fill" catalog="system" symbolScale="medium" renderingMode="hierarchical">
+                        <imageReference key="image" image="bolt.heart.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

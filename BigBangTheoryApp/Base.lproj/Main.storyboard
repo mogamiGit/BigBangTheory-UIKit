@@ -230,7 +230,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w7g-C6-WRx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Episodes" id="Zev-TC-hdl">
-                        <imageReference key="image" image="play.tv.fill" catalog="system" symbolScale="medium" renderingMode="hierarchical">
+                        <imageReference key="image" image="play.tv.fill" catalog="system" symbolScale="large" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -260,7 +260,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0kw-pb-a16">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="w7g-C6-WRx" kind="relationship" relationship="viewControllers" id="Aqz-FR-06C"/>
